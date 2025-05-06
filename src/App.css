@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+.loading {
+  background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading h4{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+.loading p{
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
