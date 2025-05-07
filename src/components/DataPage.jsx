@@ -186,16 +186,19 @@ const DataPage = ({ data, load, show_data }) => {
 
   const getInsights = () => {
     const maxRevenue = data1.reduce((a, b) =>
-      (a.Revenue > 0 || 0) >= (b.Revenue > 0 || 0) ? a : b
+      (Number(a.Revenue) || 0) >= (Number(b.Revenue) || 0) ? a : b
     );
+
     const maxUsers = data2.reduce((a, b) =>
-      a.Employees >= b.Employees ? a : b
+      (Number(a.Employees) || 0) >= (Number(b.Employees) || 0) ? a : b
     );
+
     const maxFunding = data3.reduce((a, b) =>
-      (a.Funding > 0 || 0) >= (b.Funding > 0 || 0) ? a : b
+      (Number(a.Funding) || 0) >= (Number(b.Funding) || 0) ? a : b
     );
+
     const maxGrowth = data4.reduce((a, b) =>
-      (a.GrowthRate > 0 || 0) >= (b.GrowthRate > 0 || 0) ? a : b
+      (Number(a.GrowthRate) || 0) >= (Number(b.GrowthRate) || 0) ? a : b
     );
 
     return [
